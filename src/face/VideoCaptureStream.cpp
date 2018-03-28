@@ -37,6 +37,7 @@ VideoCaptureStream::convert_mat(cv::Mat mat, cv::CascadeClassifier *pFaceCascade
     std::vector<cv::Rect> faces;
     pFaceCascade->detectMultiScale(gray, faces, 1.3, 5);
 
+    cv::namedWindow("w", cv::WINDOW_AUTOSIZE);
     cv::imshow("w", gray);
     cv::waitKey(0);
     cv::destroyAllWindows();

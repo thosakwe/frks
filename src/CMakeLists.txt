@@ -11,7 +11,7 @@ target_link_libraries(frks face)
 macro("copy_cascade" name)
     file(
             COPY "${CMAKE_CURRENT_SOURCE_DIR}/cascades/haarcascade_${name}.xml"
-            DESTINATION ${CMAKE_BINARY_DIR}
+            DESTINATION "${CMAKE_BINARY_DIR}/src"
     )
 endmacro()
 
