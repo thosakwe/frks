@@ -18,6 +18,13 @@ private:
 public:
     VideoCaptureStream();
 
+    /**
+     * Converts an OpenCV `Matrix` to a `FaceMeasurement`.
+     * @param mat
+     * @return
+     */
+    static FaceMeasurement* convert_mat(cv::Mat mat);
+
     bool is_done() override;
 
     FaceMeasurement *next() override;
