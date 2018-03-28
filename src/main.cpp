@@ -1,6 +1,12 @@
 #include <iostream>
+#include "face/VideoCaptureStream.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    auto * stream = new VideoCaptureStream();
+
+    while (!stream->is_done()) {
+        stream->next();
+    }
+
     return 0;
 }
