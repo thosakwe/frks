@@ -7,9 +7,9 @@
 VideoCaptureStream::VideoCaptureStream() {
     capture = new cv::VideoCapture(0);
 
-    if (!capture->isOpened()) {
+    if (!capture->isOpened())
         capture = nullptr;
-    }
+
 }
 
 
