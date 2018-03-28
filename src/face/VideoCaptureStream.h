@@ -5,9 +5,22 @@
 #ifndef FRKS_VIDEOCAPTURESTREAM_H
 #define FRKS_VIDEOCAPTURESTREAM_H
 
+#include <opencv2/opencv.hpp>
+#include "FaceMeasurementStream.h"
 
-class VideoCaptureStream {
+/**
+ * @brief Captures face data from an OpenCV `VideoCapture`.
+ */
+class VideoCaptureStream: public FaceMeasurementStream {
+private:
+    cv::VideoCapture *capture;
 
+public:
+    VideoCaptureStream();
+
+    bool is_done() override;
+
+    FaceMeasurement *next() override;
 };
 
 
