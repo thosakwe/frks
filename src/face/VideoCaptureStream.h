@@ -5,6 +5,7 @@
 #ifndef FRKS_VIDEOCAPTURESTREAM_H
 #define FRKS_VIDEOCAPTURESTREAM_H
 
+#include <cmath>
 #include <opencv2/opencv.hpp>
 #include <vector>
 #include "FaceMeasurementStream.h"
