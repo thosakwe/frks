@@ -4,4 +4,4 @@ set(CMAKE_CXX_STANDARD 11)
 
 find_package(OpenCV 3.0 REQUIRED)
 
-add_library(frks main.cpp cv/FaceMeasurement.h cv/FaceMeasurement.cpp)
+add_library(frks main.cpp cv/FaceMeasurement.h cv/FaceMeasurement.cpp cv/FaceMeasurementStream.cpp cv/FaceMeasurementStream.h)
