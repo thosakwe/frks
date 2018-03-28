@@ -18,7 +18,9 @@ bool VideoCaptureStream::is_done() {
 }
 
 FaceMeasurement *VideoCaptureStream::next() {
-    return nullptr;
+    cv::Mat mat;
+    *capture >> mat;
+    return convert_mat(mat);
 }
 
 FaceMeasurement *VideoCaptureStream::convert_mat(cv::Mat mat) {
