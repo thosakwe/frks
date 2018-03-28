@@ -6,6 +6,7 @@
 #define FRKS_VIDEOCAPTURESTREAM_H
 
 #include <opencv2/opencv.hpp>
+#include <vector>
 #include "FaceMeasurementStream.h"
 
 /**
@@ -13,7 +14,8 @@
  */
 class VideoCaptureStream: public FaceMeasurementStream {
 private:
-    cv::VideoCapture *capture;
+    cv::VideoCapture *mCapture;
+    cv::CascadeClassifier *mFaceCascade, *mEyeCascade;
 
 public:
     VideoCaptureStream();
@@ -23,7 +25,7 @@ public:
      * @param mat
      * @return
      */
-    static FaceMeasurement* convert_mat(cv::Mat mat);
+    static FaceMeasurement* convert_mat(cv::Mat mat, cv::CascadeClassifier *pFaceCascade, cv::CascadeClassifier *pEyeCascade);
 
     bool is_done() override;
 
